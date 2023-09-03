@@ -40,9 +40,11 @@ const Editor = () => {
         // API call for NPCs
         API.allNPC().then(data => {
             // Create and call a new function to run the code written into the editor
-            const info = JSON.parse(store.getState().editor.text);
+            const info = store.getState().editor.text;
+            console.log(info)
             const testFunction = new Function("str", editorState.editorText);
             const result = testFunction(info.args)
+            console.log(result)
             // Joe will evaluate your answer and judge you
             if (result === info.output) {
                 store.getState().user.level === 3 ? history.push("/endscreen") : history.push("/winscreen")
