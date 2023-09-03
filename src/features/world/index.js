@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Map from '../map'
 import Player from '../player'
 // import Dpad from '../dpad'
@@ -6,14 +6,11 @@ import Health from '../health'
 
 import Keys from '../keys'
 import Level from '../level'
-import Modal, { showModal } from "../../components/Modal/index";
-import { tiles } from '../../data/maps/1'
+import Modal from "../../components/Modal/index";
 import phone from './phoneRotation.png'
 
 import { tiles1 } from '../../data/maps/1'
-import { tiles2 } from '../../data/maps/2'
 import store from '../../config/store'
-import API from "../../utils/API"
 
 
 function World(props) {
@@ -23,8 +20,6 @@ function World(props) {
             tiles: tiles1
         }
     })
-
-    const health = store.getState().user.health;
 
     window.onorientationchange = function() {
         window.location.reload()
@@ -76,7 +71,7 @@ function World(props) {
                 <div className="game-wrapper">                  
       <div className="menu-select rpgui-container framed">
         <h1>Wizards and Whiteboards</h1>
-        <img src={phone}/>
+        <img src={phone} alt="phone"/>
         <h1 style={{ fontSize: '250%'}}>Please turn your device</h1>
       </div>
      

@@ -1,10 +1,6 @@
-import { bindActionCreators } from "redux";
-
-// Dependencies
 const axios = require("axios");
 
-// Deployed API URL
-const URL_PREFIX = "https://vast-oasis-70689.herokuapp.com"
+const URL_PREFIX = "http://localhost:8080"
 
 // API calls
 const API = {

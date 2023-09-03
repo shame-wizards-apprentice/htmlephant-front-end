@@ -38,9 +38,9 @@ const Keys = (props) => {
     // Key indicator
     return (
         <div className={'keys'}>
-            <img className="key key1" src={empty} />
-            <img className="key key2" src={empty} />
-            <img className="key key3" src={empty} />
+            <img className="key key1" src={empty} alt="empty key" />
+            <img className="key key2" src={empty} alt="empty key" />
+            <img className="key key3" src={empty} alt="empty key" />
         </div>
     )
 }

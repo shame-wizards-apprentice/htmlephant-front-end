@@ -1,8 +1,6 @@
 import "./App.css";
 import React from 'react';
-import { useLocation, BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import World from "./features/world";
-import API from "./utils/API"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Menu from "./pages/menu"
 import LoadGame from "./pages/loadgame"
 import NewGame from "./pages/newgame"
@@ -10,16 +8,11 @@ import Game from "./pages/game"
 import WinScreen from "./pages/winscreen"
 import Endscreen from "./pages/endscreen"
 
-// import "./styles.css";
-import store from "./config/store";
-
-
 function App() {
 
   return (
     <Router>
       <div>
-        {/* <Nav /> */}
         <Switch>
           <Route exact path={["/", "/menu"]}>
             <Menu />

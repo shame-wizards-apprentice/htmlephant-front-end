@@ -1,6 +1,5 @@
 import store from '../../config/store'
 import { SPRITE_SIZE, MAP_WIDTH, MAP_HEIGHT } from '../../config/constants'
-import Modal from "../../components/Modal/index"
 import _debounce from 'lodash.debounce';
 import API from "../../utils/API"
 
@@ -16,7 +15,6 @@ export default function handleMovement(direction) {
 
   let player = store.getState().player
 
-  // const stepSize =
   function getNewPosition(oldPos, direction) {
     switch (direction) {
       case 'WEST':

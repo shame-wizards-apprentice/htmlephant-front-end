@@ -15,6 +15,7 @@ const Health = (props) => {
                 document.querySelector('.health1').src = empty
                 document.querySelector('.health2').src = empty
                 document.querySelector('.health3').src = empty
+                break;
             case 1:
                 document.querySelector('.health3').src = empty
                 document.querySelector('.health2').src = empty
@@ -35,9 +36,9 @@ const Health = (props) => {
     // Health indicator
     return (
         <div className={'healthContainer'}>
-            <img className='health health1' src={filled} />
-            <img className='health health2' src={filled} />
-            <img className='health health3' src={filled} />
+            <img className='health health1' src={filled} alt="filled heart" />
+            <img className='health health2' src={filled} alt="filled heart" />
+            <img className='health health3' src={filled} alt="filled heart" />
         </div>
     )
 

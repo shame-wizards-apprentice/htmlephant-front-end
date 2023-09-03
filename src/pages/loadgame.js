@@ -135,9 +135,7 @@ function LoadGame() {
         }
       })
       localStorage.removeItem("token");
-      // alert("Wrong login information")
       wrongLogin()
-      // history.push("/");
     });
   }
 
@@ -151,7 +149,7 @@ function LoadGame() {
     <div className="game-wrapper ">
       <Sound />
       <div className="signin-select rpgui-container framed">
-      <button onClick={handleBackButton}><img className="back-arrow" src={back_arrow}/></button>
+      <button onClick={handleBackButton}><img className="back-arrow" alt="back arrow" src={back_arrow}/></button>
         <h1 style={{ fontSize: '250%' }}>Login</h1>
         <form className="loginInput" autoComplete="off">
           <label>User:

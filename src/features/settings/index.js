@@ -24,7 +24,7 @@ export default function Sound() {
     return(
         <div>
 
-        <button onClick={handleHomeButton}><img className="home_button" src={home_button}/></button>
+        <button onClick={handleHomeButton}><img className="home_button" src={home_button} alt="home button"/></button>
         
         <div className="setting_wrapper">
         {/* modal when home button is clicked on */}
