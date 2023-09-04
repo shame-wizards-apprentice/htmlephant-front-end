@@ -68,13 +68,11 @@ function NewGame() {
     if (!signupState.username || !signupState.password) {
       emptyUsernameOrPassword()
     } else {
-      // console.log(JSON.stringify(signupState, null, 2))
       API.signup({
         username: signupState.username,
         password: signupState.password,
         character: "Cat"
       }).then(res => {
-        // console.log(`Congrats! ${JSON.stringify(res.data)}`);
         localStorage.setItem("token", res.data.token)
         setUserState({
           character: res.data.user.character,
@@ -107,7 +105,6 @@ function NewGame() {
         });
         history.push("/game");
       }).catch(err => {
-        // console.log(`FOOL! Due to your stupidity, ${err}`);
         store.dispatch({
           type: "USER_ACTION",
           payload: {
@@ -134,13 +131,11 @@ function NewGame() {
     if (!signupState.username || !signupState.password) {
       emptyUsernameOrPassword()
     } else {
-      // console.log(JSON.stringify(signupState, null, 2))
       API.signup({
         username: signupState.username,
         password: signupState.password,
         character: "Manatee"
       }).then(res => {
-        // console.log(`Congrats! ${JSON.stringify(res.data)}`);
         localStorage.setItem("token", res.data.token)
         setUserState({
           character: res.data.user.character,
@@ -174,7 +169,6 @@ function NewGame() {
         });
         history.push("/game");
       }).catch(err => {
-        // console.log(`FOOL! Due to your stupidity, ${err}`);
         store.dispatch({
           type: "USER_ACTION",
           payload: {
@@ -204,7 +198,7 @@ function NewGame() {
     <div className="game-wrapper">
       <Sound />
       <div className="signin-select rpgui-container framed">
-        <button onClick={handleBackButton}><img className="back-arrow" src={back_arrow}/></button>
+        <button onClick={handleBackButton}><img className="back-arrow" src={back_arrow} alt="back arrow"/></button>
         <h1 style={{ fontSize: '250%' }}>Signup</h1>
         <form className="signupInput">
           <label>

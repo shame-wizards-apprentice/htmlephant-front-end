@@ -64,7 +64,7 @@ function playpauseSong() {
     isPlaying = false; 
     
     // Replace icon w/ play icon 
-    playpause_btn.innerHTML = '<img src="./assets/imgs/WW_Sword.png" alt="Previous Track" >';; 
+    playpause_btn.innerHTML = '<img src="./assets/imgs/WW_Sword.png" alt="Previous Track" >';
   } 
     
   function nextSong() { 

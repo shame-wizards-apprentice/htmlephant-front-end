@@ -1,6 +1,5 @@
 import store from "../../config/store";
 import { SPRITE_SIZE, MAP_WIDTH, MAP_HEIGHT } from "../../config/constants";
-import Modal from "../../components/Modal/index";
 import _debounce from 'lodash.debounce';
 import API from "../../utils/API"
 
@@ -66,7 +65,6 @@ export default function handleMovement(player) {
   function sendQuestion(npc, questionNumber) {
 
     document.querySelector('#player').style.display = "none"
-    // document.querySelector('#map').style.display = 'none'
 
     const level = store.getState().user.level - 1
     API.allNPC().then(res => {
@@ -331,12 +329,7 @@ export default function handleMovement(player) {
     }
   }
 
-  const reactAce = document.querySelector('.ace_text-input')
-
   const handleKeyDown = (e => {
-    console.log(e.keyCode)
-    console.log(e.target.classList)
-
     if (e.target.classList[0] !== 'ace_text-input') {
       switch (e.keyCode) {
         case 37:
