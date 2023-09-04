@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const URL_PREFIX = "http://localhost:8080"
+const URL_PREFIX = "https://wizards-and-whiteboards-server-f11da8ff7e72.herokuapp.com"
 
 // API calls
 const API = {
